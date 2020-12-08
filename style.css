@@ -56,6 +56,9 @@ button {
   font-size: 28px;
   margin-top: 8px;
   border-radius: 16px;
+  visibility: hidden;
+  user-select: none;
+  cursor: auto;
 }
 
 .game__score {
@@ -69,12 +72,16 @@ button {
   color: white;
   margin-top: 8px;
   line-height: 100%;
+  visibility: hidden;
+  user-select: none;
+  cursor: auto;
 }
 
 .game__field {
   width: 100%;
   height: 100%;
   margin-top: 45px;
+  position: relative;
 }
 
 .pop-up {
@@ -100,9 +107,18 @@ button {
   background-color: wheat;
   border: 2px solid black;
   border-radius: 50%;
+  transition: 200ms ease-in;
+}
+.pop-up__refresh:hover {
+  transform: scale(1.1);
 }
 
-.pop-up__text {
+.pop-up__refresh .pop-up__text {
   display: block;
   font-size: 38px;
+}
+
+.carrot:hover,
+.bug:hover {
+  transform: scale(1.1);
 }
